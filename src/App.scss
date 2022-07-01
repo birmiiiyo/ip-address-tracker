@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+// body{
+//   background:linear-gradient(to right,#433e9e,#7494ee);
+//   background:linear-gradient(to right,#1d1c1c,#262930);
+// }
+
+.wrapper{
+  max-width: 1440px;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+button{
+  background-color: black;
+}
+.text{
+  background:rgb(23, 67, 130) url(assets/imgs/pattern-bg.png) ;
+  height: 250px;
+}
+h1,form,.info{
+  display: flex;
+  justify-content: center;
+}
