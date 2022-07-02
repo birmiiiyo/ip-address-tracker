@@ -1,0 +1,15 @@
+input{
+width: 500px;
+border-radius: 20px 0 0 20px;
+padding: 8px;
+padding-left: 20px;
+font-size: 20px;
+border: none;
+&[placeholder]{
+    opacity: 0.8;
+}
+}
+button{
+padding: 20px;
+border-radius: 0 20px 20px 0;
+}

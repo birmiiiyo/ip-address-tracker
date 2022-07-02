@@ -21,10 +21,10 @@ ul {
 li {
   list-style-type: none;
 }
-// body{
-//   background:linear-gradient(to right,#433e9e,#7494ee);
-//   background:linear-gradient(to right,#1d1c1c,#262930);
-// }
+body{
+  background:linear-gradient(to right,#433e9e,#7494ee);
+ // background:linear-gradient(to right,#1d1c1c,#262930);
+}
 
 .wrapper{
   max-width: 1440px;
@@ -36,9 +36,16 @@ button{
 }
 .text{
   background:rgb(23, 67, 130) url(assets/imgs/pattern-bg.png) ;
-  height: 250px;
+  height: 280px;
 }
 h1,form,.info{
   display: flex;
   justify-content: center;
+}
+h1{
+  font-size: 32px;
+  padding-top: 30px;
+  margin-bottom: 23px;
+  font-weight: 500;
+  color: white;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Information.scss';
 
 export default function Information() {
   React.useEffect(() => {
@@ -14,23 +15,23 @@ export default function Information() {
   }, []);
 
   return (
-    <>
-      <div>
+    <div className="info">
+      <div className="block">
         <p> IP ADDRESS</p>
-        <h6></h6>
+        <h6>192.168.1.1</h6>
       </div>
-      <div>
+      <div className="block">
         <p>LOCATION</p>
-        <h6></h6>
+        <h6>Minsk</h6>
       </div>
-      <div>
+      <div className="block">
         <p>TIMEZONE</p>
-        <h6></h6>
+        <h6>utc -3</h6>
       </div>
-      <div>
+      <div className="block">
         <p>ISP</p>
-        <h6></h6>
+        <h6>SpaceX</h6>
       </div>
-    </>
+    </div>
   );
 }

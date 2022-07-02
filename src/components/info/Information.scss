@@ -1,0 +1,35 @@
+.info{
+    margin: 45px  auto;
+    margin-bottom: 0px;
+    width: 1110px;
+    border-radius: 13px;
+    justify-content: space-between;
+    background: white;
+  }
+
+.block{
+    margin-right: 50px;
+       border-left: 1px solid rgba($color: #9d7373, $alpha: 0.3);
+        &:first-child{
+            border-left: none;
+        }
+        &:last-child{
+            margin-right: 100px;
+        }
+    }
+
+p{
+margin:35px 0 20px 0;
+font-weight: 700;
+opacity: 0.4;
+font-size: 14px;
+
+}
+h6{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+p,h6{
+    margin-left: 30px;
+}

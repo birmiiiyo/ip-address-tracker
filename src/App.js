@@ -11,9 +11,7 @@ function App() {
 
           <Form />
 
-          <div className="info">
-            <Information />
-          </div>
+          <Information />
         </div>
         <div>map</div>
       </div>
