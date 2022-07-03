@@ -1,6 +1,7 @@
 import './App.scss';
 import Form from './components/form/Form';
 import Information from './components/info/Information';
+import Map from './components/map/Map';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
 
           <Information />
         </div>
-        <div>map</div>
+        <Map />
       </div>
     </div>
   );

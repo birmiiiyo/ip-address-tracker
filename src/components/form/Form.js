@@ -3,20 +3,23 @@ import './Form.scss';
 import iconArrow from '../../assets/imgs/icon-arrow.svg';
 
 export default function Form() {
-  const [ip, setIp] = useState('');
+  const [newIp, setNewIp] = useState('');
 
-  const newIp = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setIp(e.target.value);
+    setNewIp('');
   };
-
-  console.log(ip);
+  console.log(newIp);
   return (
     <>
-      <form onSubmit={newIp}>
-        <input placeholder="192.168.1.1" value={ip} />
+      <form onSubmit={handleSubmit}>
+        <input
+          placeholder="Search for any IP address or domain"
+          value={newIp}
+          onChange={(e) => setNewIp(e.target.value)}
+        />
         <button type="submit">
-          <img src={iconArrow} />
+          <img src={iconArrow} alt="button arrow" />
         </button>
       </form>
     </>

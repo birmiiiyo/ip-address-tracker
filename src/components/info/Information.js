@@ -1,16 +1,19 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import './Information.scss';
 
 export default function Information() {
-  React.useEffect(() => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
     fetch(
-      `https://geo.ipify.org/api/v2/country,city?apiKey=at_2Qgm5PRnbE3K7F7Ps8AgQTv3gduoH&ipAddress=`,
+      `https://geo.ipify.org/api/v2/country,city?apiKey=at_2Qgm5PRnbE3K7F7Ps8AgQTv3gduoH&ipAddress=8.8.8.8`,
     )
       .then((data) => {
         return data.json();
       })
       .then((data) => {
-        console.log(data);
+        setData(data);
       });
   }, []);
 
@@ -18,19 +21,21 @@ export default function Information() {
     <div className="info">
       <div className="block">
         <p> IP ADDRESS</p>
-        <h6>192.168.1.1</h6>
+        <h6>{data.ip}</h6>
       </div>
       <div className="block">
         <p>LOCATION</p>
-        <h6>Minsk</h6>
+        <h6>
+          {data.location.country},{data.location.city}
+        </h6>
       </div>
       <div className="block">
         <p>TIMEZONE</p>
-        <h6>utc -3</h6>
+        <h6>{data.location.timezone}</h6>
       </div>
       <div className="block">
         <p>ISP</p>
-        <h6>SpaceX</h6>
+        <h6>{data.isp}</h6>
       </div>
     </div>
   );
