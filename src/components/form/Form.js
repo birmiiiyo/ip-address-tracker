@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import './Form.scss';
 import iconArrow from '../../assets/imgs/icon-arrow.svg';
+import { useDispatch } from 'react-redux';
+
+import { getData } from '../../dukcs/dataAction';
 
 export default function Form() {
   const [newIp, setNewIp] = useState('');
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch({ type: 'NEW_IP', payload: newIp });
+    dispatch(getData(newIp));
     setNewIp('');
   };
-  console.log(newIp);
+
   return (
     <>
       <form onSubmit={handleSubmit}>
