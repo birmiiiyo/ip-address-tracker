@@ -1,10 +1,12 @@
 .info{
+    position: relative;
     margin: 45px  auto;
     margin-bottom: 0px;
     width: 1110px;
     border-radius: 13px;
     justify-content: space-between;
     background: white;
+    z-index:1;
   }
 
 .block{

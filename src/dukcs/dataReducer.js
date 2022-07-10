@@ -3,7 +3,6 @@ const defaultState = {
 };
 
 const GET_DATA = 'GET_DATA';
-
 const dataReducer = (state = defaultState, action) => {
   switch (action.type) {
     case GET_DATA:
