@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { isEmpty } from 'lodash';
+import Loader from '../loader/Loader';
 
 import './Information.scss';
 
@@ -11,21 +12,21 @@ export default function Information() {
     <div className="info">
       <div className="block">
         <p> IP ADDRESS</p>
-        <h6>{isEmpty(data) === false ? `${data.ip}` : 'Oops'}</h6>
+        <h6>{isEmpty(data) === false ? `${data.ip}` : <Loader />}</h6>
       </div>
       <div className="block">
         <p>LOCATION</p>
         <h6>
-          {isEmpty(data) === false ? `${data.location.country}, ${data.location.city}` : 'Oops'}
+          {isEmpty(data) === false ? `${data.location.country}, ${data.location.city}` : <Loader />}
         </h6>
       </div>
       <div className="block">
         <p>TIMEZONE</p>
-        <h6>{isEmpty(data) === false ? `${data.location.timezone}` : 'Oops'}</h6>
+        <h6>{isEmpty(data) === false ? `${data.location.timezone}` : <Loader />}</h6>
       </div>
       <div className="block">
         <p>ISP</p>
-        <h6>{isEmpty(data) === false ? `${data.isp}` : 'Oops'}</h6>
+        <h6>{isEmpty(data) === false ? `${data.isp}` : <Loader />}</h6>
       </div>
     </div>
   );
