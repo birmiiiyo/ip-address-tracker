@@ -17,7 +17,9 @@ function App() {
           type: 'GET_DATA',
           payload: data.data,
         });
-      } catch (err) {}
+      } catch (err) {
+        alert('peredelivai');
+      }
     };
   };
   dispatch(firstData(''));

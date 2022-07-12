@@ -10,7 +10,7 @@ const getData = (ip) => {
         type: 'GET_DATA',
         payload: data.data,
       });
-    } catch (err) {}
+    } catch (error) {}
   };
 };
 export { getData };

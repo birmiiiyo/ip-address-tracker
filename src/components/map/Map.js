@@ -1,16 +1,20 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { MapContainer, TileLayer, Marker, useMap, useMapEvents, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, useMap, Popup } from 'react-leaflet';
 import { LocationIcon } from './customMarker';
 
 import 'leaflet/dist/leaflet.css';
 
 import './Map.scss';
+
 export default function Map() {
   const data = useSelector((state) => state.data.data);
   console.log(data);
 
-  const position = [data.location.lat, data.location.lng];
+  const position = [
+    data.location.lat === undefined ? '53' : data.location.lat,
+    data.location.lng === undefined ? '27' : data.location.lng,
+  ];
 
   function CenterMap({ coords }) {
     const map = useMap();
