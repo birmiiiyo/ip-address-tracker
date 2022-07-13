@@ -31,10 +31,8 @@ export default function Information() {
     </div>
   );
 }
-// {data.ip}
-// {data.location.country}, {data.location.city}
-// {data.location.timezone}
-// {data.isp}31.117.224.170
+
+// 31.117.224.170
 // 134.212.187.57
 // 242.108.48.215
 // 175.242.39.182

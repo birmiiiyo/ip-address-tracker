@@ -9,12 +9,8 @@ import './Map.scss';
 
 export default function Map() {
   const data = useSelector((state) => state.data.data);
-  console.log(data);
 
-  const position = [
-    data.location.lat === undefined ? '53' : data.location.lat,
-    data.location.lng === undefined ? '27' : data.location.lng,
-  ];
+  const position = [data.location?.lat, data.location?.lng];
 
   function CenterMap({ coords }) {
     const map = useMap();

@@ -1,11 +1,15 @@
+import React from 'react';
 import './App.scss';
 import Form from './components/form/Form';
 import Information from './components/info/Information';
 import Map from './components/map/Map';
+import Error from './components/Error/Error';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 
 function App() {
+  const [checkError, setCheckError] = React.useState(true);
+
   const dispatch = useDispatch();
   const firstData = () => {
     return async (dispatch) => {
@@ -18,23 +22,27 @@ function App() {
           payload: data.data,
         });
       } catch (err) {
-        alert('peredelivai');
+        setCheckError(false);
       }
     };
   };
-  dispatch(firstData(''));
+  //dispatch(firstData(''));
   return (
     <div className="App">
-      <div className="wrapper">
-        <div className="text">
-          <h1>IP Address Tracker</h1>
+      {checkError === true ? (
+        <Error />
+      ) : (
+        <div className="wrapper">
+          <div className="text">
+            <h1>IP Address Tracker</h1>
 
-          <Form />
+            <Form />
 
-          <Information />
+            <Information />
+          </div>
+          <Map />
         </div>
-        <Map />
-      </div>
+      )}
     </div>
   );
 }
