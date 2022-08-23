@@ -34,7 +34,7 @@ function App() {
       ) : (
         <div className="wrapper">
           <div className="text">
-            <h1>IP Address Tracker</h1>
+            <h1>IP Address Trackeг</h1>
 
             <Form />
 
